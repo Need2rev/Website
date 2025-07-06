@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Always learning, always creating...",
             "Let's connect and build something awesome!",
             "I talk to my printer more than Wheatley talks to himself. Neither of them listen.",
-            "Top 120 in Beat Saber Germany",
+            "I'm ranked in the Top 120 in Beat Saber Germany. Not flexing. Okay, maybe a little.",
             "I don’t test things. I Portal-style science them into existence.",
             "I own a 24V vacuum with 90 watts of pure chaos — it sucks harder than Monday mornings.",
             "Ubuntu without login? Of course. My laptop already knows it belongs to the Agent.",
@@ -82,9 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "I have more failed side projects than actual side friends.",
             "I wired up my scooter to Discord. Because who wouldn't want to get pinged by a gas tank?",
             "I don't make backups. I make mistakes.",
-            "My sense of UI design is ‘vibes first, logic later.",
+            "My sense of UI design is ‘vibes first, logic later’.",
             "I installed Arch once. Then forgot how I did it. I live in fear.",
-            "I coded my own dashboard from scratch. Took three weeks. Still doesn’t show the time correctly."
+            "I coded my own dashboard from scratch. Took three weeks. Still doesn’t show the time correctly.",
+            "Dream big. Fail harder. Reboot faster.",
+            "If you can’t find the way, make it with solder and duct tape."
         ];
         
         let currentPhrase = 0;
