@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const particlesContainer = document.getElementById('particles');
         if (!particlesContainer) return; // Beenden, wenn der Container nicht existiert
 
-        const particleCount = 20; // Mehr Partikel für einen volleren Effekt
+        const particleCount = 100; // Mehr Partikel für einen volleren Effekt
         
         for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
