@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!typingElement) return; // Beenden, wenn das Element nicht existiert
 
         const phrases = [
-            "Welcome to my digital world...",
+       "Welcome to my digital world...",
             "I code, I game, I build...",
             "Portal speedrun PB: 18:11",
             "I modified more things than Cave Johnson modified test subjects.",
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "I scream ‘SPACE!’ more than I make sense.",
             "I flashed my ROM so many times, I think my phone has trauma.",
             "I turned a Huawei phone into a scooter speedometer. Because GPS is a mindset",
-            "Cave Johnson wanted lemons. I gave him broken code and three exploded capacitors.", 
+            "Cave Johnson wanted lemons. I gave him broken code and three exploded capacitors.",
             "When life gives me no OBD2, I say: challenge accepted.",
             "‘This was a triumph’ — my thoughts every time my homemade speedometer actually works.",
             "You use your laptop for school. I turned mine into a jukebox nightclub.",
