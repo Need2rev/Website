@@ -1,0 +1,609 @@
+/* Enhanced CSS Framework für alle Seiten */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: black; /* Hintergrund auf reines Schwarz geändert */
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  padding-top: 80px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Floating Particles Background */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(0, 242, 255, 0.6);
+  border-radius: 50%;
+  animation: floatParticle 8s linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Enhanced Navigation (Glas-Effekt für Buttons) */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 15, 15, 0.3); /* Leicht transparent für Glas-Effekt */
+  backdrop-filter: blur(15px); /* Wichtiger Teil des Glas-Effekts */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  z-index: 1000;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00f2ff, #b300ff, #ff6600);
+  background-size: 300% 100%;
+  animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+nav a {
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08); /* Leicht transparent für Glas-Effekt */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Heller Rand für Glas-Effekt */
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px); /* Wichtiger Teil des Glas-Effekts für Buttons */
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+nav a:hover::before {
+  left: 100%;
+}
+
+nav a:hover, nav a.active {
+  background: rgba(0, 242, 255, 0.15); /* Leichter blauer Schimmer beim Hover */
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 20px rgba(0, 242, 255, 0.4),
+    0 0 40px rgba(179, 0, 255, 0.2),
+    0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 242, 255, 0.3);
+}
+
+/* Main Content Container */
+main {
+  background: rgba(255, 255, 255, 0.05); /* Transparent genug für Video-Hintergrund */
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 1200px;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Headers */
+.animated-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-header h1 {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #00f2ff, #b300ff, #ff6600);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 30px rgba(0, 242, 255, 0.3);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #888;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.5s forwards;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Universal Card System */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08); /* Transparent genug für Glas-Effekt */
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Heller Rand für Glas-Effekt */
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp 0.8s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px); /* Wichtiger Teil des Glas-Effekts */
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 242, 255, 0.2),
+    0 0 30px rgba(179, 0, 255, 0.15);
+  border-color: rgba(0, 242, 255, 0.4);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 242, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Card Icons */
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #00f2ff;
+  font-weight: 600;
+}
+
+.card-description {
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+/* Social Cards Specific */
+.social-card {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-card:hover .card-icon {
+  animation-play-state: paused;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Specific background gradients for social cards for better visual distinction */
+.social-card.steam {
+  background: linear-gradient(135deg, rgba(23, 26, 33, 0.8), rgba(52, 73, 94, 0.6));
+}
+
+.social-card.discord {
+  background: linear-gradient(135deg, rgba(114, 137, 218, 0.3), rgba(88, 101, 242, 0.3));
+}
+
+.social-card.twitch {
+  background: linear-gradient(135deg, rgba(145, 70, 255, 0.3), rgba(169, 112, 255, 0.3));
+}
+
+.social-card.github {
+  background: linear-gradient(135deg, rgba(36, 41, 46, 0.8), rgba(64, 68, 75, 0.6));
+}
+
+.social-card.youtube {
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.3), rgba(255, 69, 0, 0.3));
+}
+
+.social-card.instagram {
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.3), rgba(255, 204, 119, 0.3));
+}
+
+/* Speedrun Card */
+.speedrun-card {
+  background: linear-gradient(135deg, #ff6600, #ff9900);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.speedrun-card::after {
+  content: '🏆'; /* Trophäen-Emoji als dekoratives Element */
+  position: absolute;
+  top: 50%; /* Zentriert vertikal */
+  left: 50%; /* Zentriert horizontal */
+  transform: translate(-50%, -50%); /* Korrigiert die Position basierend auf der Größe des Emojis */
+  font-size: 5rem; /* Etwas größer für bessere Sichtbarkeit */
+  opacity: 0.1; /* Dezenter, aber sichtbar */
+  animation: float 3s ease-in-out infinite;
+  z-index: 0; /* Stellt sicher, dass es unter dem Inhalt liegt */
+}
+
+.speedrun-time {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  animation: pulse 2s infinite;
+  margin: 1rem 0;
+  position: relative; /* Stellt sicher, dass der Text über dem Pokal liegt */
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.tech-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-item:hover {
+  background: rgba(0, 242, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 242, 255, 0.3);
+}
+
+.tech-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.tech-item:hover::before {
+  left: 100%;
+}
+
+/* Bio Section */
+.bio-section {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid #00f2ff;
+}
+
+.bio-section p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.bio-section p:nth-child(2) { animation-delay: 0.1s; }
+.bio-section p:nth-child(3) { animation-delay: 0.2s; }
+.bio-section p:nth-child(4) { animation-delay: 0.3s; }
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons (falls benötigt, für Call-to-Actions) */
+.btn {
+  padding: 0.8rem 1.5rem;
+  background: rgba(0, 242, 255, 0.1);
+  border: 1px solid rgba(0, 242, 255, 0.3);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.btn:hover {
+  background: rgba(0, 242, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 242, 255, 0.3);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .animated-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  main {
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+  
+  nav {
+    padding: 1rem;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  nav a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  body {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  opacity: 0;
+  animation: loadIn 1s ease-out forwards;
+}
+
+@keyframes loadIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+footer a {
+  color: #888;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #00f2ff;
+}
+
+/* Special Highlight (bereits vorhanden) */
+.highlight-speedrun {
+  font-weight: bold;
+  color: #ff6600;
+  animation: pulse 2s infinite;
+}
+
+/* Portal Speedrun Highlight (bereits vorhanden) */
+.portal-highlight {
+  background: linear-gradient(45deg, #ff6600, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+/* Typing Animation (für Home-Seite) */
+.typing-text {
+    font-size: 1.5rem;
+    color: #00f2ff;
+    margin: 2rem 0;
+    text-align: center;
+    height: 2rem; /* Höhe für den Text reservieren */
+}
+
+.typing-text::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* New social card specific styles (optional, wenn gewünscht) */
+.social-card.beatleader {
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.3), rgba(255, 153, 51, 0.3)); /* Orange-Ton */
+}
+
+.social-card.beatsaber-discord {
+  background: linear-gradient(135deg, rgba(114, 137, 218, 0.3), rgba(88, 101, 242, 0.3)); /* Discord-Blau */
+}
+
+.social-card.speedrun-com {
+  background: linear-gradient(135deg, rgba(26, 115, 232, 0.3), rgba(66, 133, 244, 0.3)); /* Blau-Ton */
+}
