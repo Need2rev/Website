@@ -30,10 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const phrases = [
        "Welcome to my digital world...",
             "I code, I game, I build...",
-            "Portal speedrun PB: 18:11",
+            "Portal speedrun PB: 17:02",
             "I modified more things than Cave Johnson modified test subjects.",
             "Always learning, always creating...",
             "Let's connect and build something awesome!",
+            "mom: i give you 30min of screen time! I only need 17:02",
             "I talk to my printer more than Wheatley talks to himself. Neither of them listen.",
             "I'm ranked in the Top 120 in Beat Saber Germany. Not flexing. Okay, maybe a little.",
             "I don’t test things. I Portal-style science them into existence.",
