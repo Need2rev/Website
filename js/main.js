@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "I don’t test things. I Portal-style science them into existence.",
             "I own a 24V vacuum with 90 watts of pure chaos — it sucks harder than Monday mornings.",
             "Ubuntu without login? Of course. My laptop already knows it belongs to the Agent.",
-            "GLaDOS: ‘You monster.’ — Me, after rooting yet another device.",
+            "GLaDOS: ‘You monster.’  Me, after rooting yet another device.",
             "My website has more animation than a Pixar movie on caffeine.",
             "My first tablet had more personality than most modern iPads",
             "When I say I want full control, I mean I want my scooter to ping me on Discord when it’s low on gas.",
